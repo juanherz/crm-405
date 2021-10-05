@@ -20,7 +20,7 @@ function Profile() {
 
     useEffect(() => {
         checkUser()
-    })
+    },[])
     async function checkUser() {
         try {
             const user = await Auth.currentAuthenticatedUser()
