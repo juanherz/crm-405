@@ -11,17 +11,27 @@ function Navbar() {
             <ul className='main-nav loaded'>
                 <li>
                     <Link href='/home'>
-                        <a>Home</a>
+                        <a>Inicio</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href='/clientes'>
+                        <a>Clientes</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href='/corridas'>
+                        <a>Corridas</a>
                     </Link>
                 </li>
                 <li>
                     <Link href='/profile'>
-                        <a>Profile</a>
+                        <a>Perfil</a>
                     </Link>
                 </li>
                 <li>
                     <Link href='/protected'>
-                        <a>Protected</a>
+                        <a>Protegido</a>
                     </Link>
                 </li>
             </ul>
