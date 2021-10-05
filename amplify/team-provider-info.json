@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-crm405-dev-161950-authRole",
+      "UnauthRoleArn": "arn:aws:iam::337608938438:role/amplify-crm405-dev-161950-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::337608938438:role/amplify-crm405-dev-161950-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-crm405-dev-161950-deployment",
+      "UnauthRoleName": "amplify-crm405-dev-161950-unauthRole",
+      "StackName": "amplify-crm405-dev-161950",
+      "StackId": "arn:aws:cloudformation:us-east-2:337608938438:stack/amplify-crm405-dev-161950/d24dda30-2558-11ec-8e9f-06aaaf76c25e",
+      "AmplifyAppId": "d3rgnutmt8ygqx"
+    },
+    "categories": {
+      "auth": {
+        "crm405320cd764": {}
+      }
+    }
+  }
+}
