@@ -6,6 +6,7 @@ import { ColumnFilter } from './ColumnFilter';
 import { Checkbox } from './Checkbox';
 import { COLUMNS2 } from './columns2';
 import axios from 'axios';
+import Link from 'next/link';
 
 export const CompleteTable2 = () => {
 
@@ -174,7 +175,39 @@ export const CompleteTable2 = () => {
                 <button onClick={() => nextPage()} disabled={!canNextPage}>Next</button>
                 <button onClick={() => gotoPage(pageCount - 1)} disabled={!canNextPage}>{'>>'}</button>
             </div>
-            <pre>
+            <h1>Detalles de cuentas seleccionadas</h1>
+            <ol>
+                {
+                    selectedFlatRows.map(selectedRow => {
+                        console.log(selectedRow)
+                        return(
+                            <> 
+                                <br />
+                                <li key={selectedRow.values.id}>Nombre: {selectedRow.values.nombre}</li>
+                                <li key={selectedRow.values.id}>Cuenta: {selectedRow.values.cuenta}</li>
+                                <li key={selectedRow.values.id}>Telefono 1: {selectedRow.values.telefono1}</li>
+                                <li key={selectedRow.values.id}>Telefono 2: {selectedRow.values.telefono2}</li>
+                                <li key={selectedRow.values.id}>Telefono 3: {selectedRow.values.telefono3}</li>
+                                <li key={selectedRow.values.id}>Telefono Whatsapp: {selectedRow.values.telefonowa}</li>
+                                <li key={selectedRow.values.id}>Status: {selectedRow.values.status}</li>
+                                <li key={selectedRow.values.id}>Fecha de modificación: {selectedRow.values.date_modified}</li>
+                                <Link href={`/clientes/${selectedRow.values.id}`} passHref>
+                                    <button type="button">Ir a detalles de cuenta</button>
+                                </Link>
+                                
+                                <br />
+                            </>
+                        )
+                    })
+                }
+            </ol>
+            
+        </>
+    )
+}
+
+
+{/* <pre>
                 <code>
                 {JSON.stringify(
                     {
@@ -184,8 +217,5 @@ export const CompleteTable2 = () => {
                     2
                 )}
                 </code>
-            </pre>
-        </>
-    )
-}
-
+                
+            </pre> */}
